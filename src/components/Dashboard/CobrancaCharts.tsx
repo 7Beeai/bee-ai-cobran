@@ -37,6 +37,25 @@ const formatCurrency = (value: number) => {
   }).format(value);
 };
 
+const CustomTooltip = ({ active, payload, label, chartType }: any) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-card border border-border/50 rounded-lg shadow-lg p-3 backdrop-blur-sm">
+        <p className="font-medium text-card-foreground mb-2">
+          {chartType === 'regua' ? `Etapa ${label}` : `Dia ${label}`}
+        </p>
+        {payload.map((entry: any, index: number) => (
+          <p key={index} className="text-sm" style={{ color: entry.color }}>
+            <span className="font-medium">{entry.name}:</span> {' '}
+            {chartType === 'regua' ? formatCurrency(entry.value) : entry.value}
+          </p>
+        ))}
+      </div>
+    );
+  }
+  return null;
+};
+
 interface CobrancaChartsProps {
   onReguaClick?: (etapa: string) => void;
   onDailyClick?: (day: number) => void;
@@ -46,97 +65,92 @@ export const CobrancaCharts = ({ onReguaClick, onDailyClick }: CobrancaChartsPro
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
       {/* Réguas de Cobrança Chart */}
-      <div className="bg-card rounded-lg p-6 shadow-sm border">
-        <h3 className="text-lg font-semibold mb-4 text-card-foreground">Réguas de Cobrança</h3>
-        <ResponsiveContainer width="100%" height={300}>
+      <div className="bg-card rounded-xl p-6 shadow-md border border-border/50 backdrop-blur-sm">
+        <h3 className="text-lg font-semibold mb-6 text-card-foreground flex items-center">
+          <div className="w-1 h-5 bg-chart-primary rounded-full mr-3"></div>
+          Réguas de Cobrança
+        </h3>
+        <ResponsiveContainer width="100%" height={320}>
           <BarChart data={reguaData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+            <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.3} />
             <XAxis 
               dataKey="etapa" 
-              stroke="#64748b"
+              stroke="hsl(var(--muted-foreground))"
               fontSize={12}
+              fontWeight={500}
             />
             <YAxis 
-              stroke="#64748b"
+              stroke="hsl(var(--muted-foreground))"
               fontSize={12}
               tickFormatter={formatCurrency}
+              fontWeight={500}
             />
             <Tooltip 
-              formatter={(value: number, name: string) => [
-                formatCurrency(value), 
-                name === 'recebido' ? 'Recebido' : 'Em Aberto'
-              ]}
-              labelFormatter={(label) => `Etapa ${label}`}
-              contentStyle={{
-                backgroundColor: 'white',
-                border: '1px solid #e2e8f0',
-                borderRadius: '6px',
-                fontSize: '12px'
-              }}
+              content={<CustomTooltip chartType="regua" />}
             />
             <Bar 
               dataKey="recebido" 
               fill="hsl(var(--chart-primary))" 
-              radius={[2, 2, 0, 0]}
+              radius={[4, 4, 0, 0]}
               onClick={(data) => onReguaClick?.(data.etapa)}
               style={{ cursor: onReguaClick ? 'pointer' : 'default' }}
             />
             <Bar 
               dataKey="emAberto" 
               fill="hsl(var(--chart-secondary))" 
-              radius={[2, 2, 0, 0]}
+              radius={[4, 4, 0, 0]}
               onClick={(data) => onReguaClick?.(data.etapa)}
               style={{ cursor: onReguaClick ? 'pointer' : 'default' }}
             />
           </BarChart>
         </ResponsiveContainer>
         
-        <div className="flex justify-center mt-4 space-x-6">
-          <div className="flex items-center">
-            <div className="w-3 h-3 bg-chart-primary rounded mr-2"></div>
-            <span className="text-sm text-muted-foreground">Recebido</span>
+        <div className="flex justify-center mt-6 space-x-8">
+          <div className="flex items-center bg-dashboard-metric-positive-light px-3 py-1.5 rounded-lg">
+            <div className="w-3 h-3 bg-chart-primary rounded-sm mr-2"></div>
+            <span className="text-sm font-medium text-dashboard-metric-positive">Recebido</span>
           </div>
-          <div className="flex items-center">
-            <div className="w-3 h-3 bg-chart-secondary rounded mr-2"></div>
-            <span className="text-sm text-muted-foreground">Em Aberto</span>
+          <div className="flex items-center bg-secondary/50 px-3 py-1.5 rounded-lg">
+            <div className="w-3 h-3 bg-chart-secondary rounded-sm mr-2"></div>
+            <span className="text-sm font-medium text-secondary-foreground">Em Aberto</span>
           </div>
         </div>
       </div>
 
       {/* Cobrança Diária Chart */}
-      <div className="bg-card rounded-lg p-6 shadow-sm border">
-        <h3 className="text-lg font-semibold mb-4 text-card-foreground">Cobrança Diária</h3>
-        <ResponsiveContainer width="100%" height={300}>
+      <div className="bg-card rounded-xl p-6 shadow-md border border-border/50 backdrop-blur-sm">
+        <h3 className="text-lg font-semibold mb-6 text-card-foreground flex items-center">
+          <div className="w-1 h-5 bg-chart-accent rounded-full mr-3"></div>
+          Cobrança Diária
+        </h3>
+        <ResponsiveContainer width="100%" height={320}>
           <LineChart data={dailyData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+            <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" opacity={0.3} />
             <XAxis 
               dataKey="dia" 
-              stroke="#64748b"
+              stroke="hsl(var(--muted-foreground))"
               fontSize={12}
+              fontWeight={500}
             />
             <YAxis 
-              stroke="#64748b"
+              stroke="hsl(var(--muted-foreground))"
               fontSize={12}
+              fontWeight={500}
             />
             <Tooltip 
-              formatter={(value: number) => [value, 'Valor Recebido']}
-              labelFormatter={(label) => `Dia ${label}`}
-              contentStyle={{
-                backgroundColor: 'white',
-                border: '1px solid #e2e8f0',
-                borderRadius: '6px',
-                fontSize: '12px'
-              }}
+              content={<CustomTooltip chartType="daily" />}
             />
             <Line 
               type="monotone" 
               dataKey="valor" 
               stroke="hsl(var(--chart-accent))" 
               strokeWidth={3}
-              dot={{ fill: "hsl(var(--chart-accent))", strokeWidth: 0, r: 4 }}
+              dot={{ fill: "hsl(var(--chart-accent))", strokeWidth: 0, r: 5 }}
               activeDot={{ 
-                r: 6, 
+                r: 7, 
                 fill: "hsl(var(--chart-accent))",
+                stroke: "hsl(var(--card))",
+                strokeWidth: 2,
                 onClick: (data) => onDailyClick?.(data.payload.dia)
               }}
             />

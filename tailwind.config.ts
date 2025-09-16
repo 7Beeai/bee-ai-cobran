@@ -39,6 +39,10 @@ export default {
           DEFAULT: "hsl(var(--warning))",
           foreground: "hsl(var(--warning-foreground))",
         },
+        info: {
+          DEFAULT: "hsl(var(--info))",
+          foreground: "hsl(var(--info-foreground))",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -59,16 +63,23 @@ export default {
           bg: "hsl(var(--dashboard-bg))",
           header: "hsl(var(--header-bg))",
           "nav-active": "hsl(var(--nav-active))",
+          "nav-hover": "hsl(var(--nav-hover))",
           "nav-inactive": "hsl(var(--nav-inactive))",
           "section-accent": "hsl(var(--section-accent))",
           "metric-positive": "hsl(var(--metric-positive))",
+          "metric-positive-light": "hsl(var(--metric-positive-light))",
           "metric-negative": "hsl(var(--metric-negative))",
+          "metric-negative-light": "hsl(var(--metric-negative-light))",
           "metric-neutral": "hsl(var(--metric-neutral))",
+          "metric-currency": "hsl(var(--metric-currency))",
         },
         chart: {
           primary: "hsl(var(--chart-primary))",
           secondary: "hsl(var(--chart-secondary))",
           accent: "hsl(var(--chart-accent))",
+          warning: "hsl(var(--chart-warning))",
+          info: "hsl(var(--chart-info))",
+          success: "hsl(var(--chart-success))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -85,6 +96,18 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-card': 'var(--gradient-card)',
+        'gradient-success': 'var(--gradient-success)',
+        'header-gradient': 'var(--header-gradient)',
+      },
+      boxShadow: {
+        'brand': 'var(--shadow-brand)',
+        'sm': 'var(--shadow-sm)',
+        'md': 'var(--shadow-md)',
+        'lg': 'var(--shadow-lg)',
       },
       keyframes: {
         "accordion-down": {

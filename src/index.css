@@ -8,56 +8,84 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 243 244 246;
+    /* Base colors - Light theme */
+    --background: 248 250 252;
     --foreground: 15 23 42;
 
-    --card: 0 0% 100%;
+    --card: 255 255 255;
     --card-foreground: 15 23 42;
 
-    --popover: 0 0% 100%;
+    --popover: 255 255 255;
     --popover-foreground: 15 23 42;
 
-    --primary: 166 76% 21%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary brand colors - Teal/Green palette */
+    --primary: 158 64% 52%;
+    --primary-foreground: 255 255 255;
 
-    --secondary: 166 32% 94%;
-    --secondary-foreground: 166 76% 21%;
+    --secondary: 158 25% 95%;
+    --secondary-foreground: 158 64% 22%;
 
-    --muted: 220 13% 91%;
-    --muted-foreground: 100 7% 23%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 100 7% 27%;
 
-    --accent: 166 79% 42%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 158 64% 52%;
+    --accent-foreground: 255 255 255;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    /* Status colors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 255 255 255;
 
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 255 255 255;
 
-    --warning: 45 93% 47%;
-    --warning-foreground: 0 0% 100%;
+    --warning: 43 96% 56%;
+    --warning-foreground: 0 0% 0%;
 
+    --info: 212 95% 68%;
+    --info-foreground: 255 255 255;
+
+    /* UI elements */
     --border: 214 32% 91%;
-    --input: 0 0% 100%;
-    --ring: 166 79% 42%;
+    --input: 255 255 255;
+    --ring: 158 64% 52%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     /* Dashboard specific colors */
-    --dashboard-bg: 243 244 246;
-    --header-bg: 166 76% 21%;
-    --nav-active: 166 79% 42%;
-    --nav-inactive: 166 32% 94%;
-    --section-accent: 20 83% 45%;
-    --metric-positive: 142 76% 36%;
-    --metric-negative: 0 84% 60%;
-    --metric-neutral: 100 7% 23%;
+    --dashboard-bg: 248 250 252;
+    --header-bg: 158 64% 22%;
+    --header-gradient: linear-gradient(135deg, hsl(158 64% 22%) 0%, hsl(158 64% 28%) 100%);
+    --nav-active: 158 64% 52%;
+    --nav-hover: 158 64% 45%;
+    --nav-inactive: 158 25% 95%;
+    --section-accent: 142 71% 45%;
     
-    /* Chart colors */
-    --chart-primary: 166 79% 42%;
-    --chart-secondary: 65 92% 76%;
-    --chart-accent: 142 76% 36%;
+    /* KPI colors */
+    --metric-positive: 142 71% 45%;
+    --metric-positive-light: 142 54% 91%;
+    --metric-negative: 0 72% 51%;
+    --metric-negative-light: 0 86% 97%;
+    --metric-neutral: 64 4% 26%;
+    --metric-currency: 158 64% 52%;
+    
+    /* Chart colors palette */
+    --chart-primary: 158 64% 52%;
+    --chart-secondary: 65 92% 65%;
+    --chart-accent: 142 71% 45%;
+    --chart-warning: 43 96% 56%;
+    --chart-info: 212 95% 68%;
+    --chart-success: 142 71% 45%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(142 71% 45%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(255 255 255) 0%, hsl(255 255 255 / 0.8) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 71% 55%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-brand: 0 10px 25px -5px hsl(158 64% 52% / 0.2);
 
     --sidebar-background: 0 0% 98%;
 
@@ -77,63 +105,92 @@ All colors MUST be HSL.
   }
 
   .dark {
+    /* Base colors - Dark theme */
     --background: 15 23 42;
-    --foreground: 243 244 246;
+    --foreground: 248 250 252;
 
     --card: 30 41 59;
-    --card-foreground: 243 244 246;
+    --card-foreground: 248 250 252;
 
     --popover: 30 41 59;
-    --popover-foreground: 243 244 246;
+    --popover-foreground: 248 250 252;
 
-    --primary: 166 79% 42%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary brand colors - Dark mode */
+    --primary: 158 64% 62%;
+    --primary-foreground: 15 23 42;
 
-    --secondary: 166 32% 94%;
-    --secondary-foreground: 166 76% 21%;
+    --secondary: 158 25% 15%;
+    --secondary-foreground: 158 64% 82%;
 
-    --muted: 100 7% 23%;
-    --muted-foreground: 220 13% 91%;
+    --muted: 100 7% 15%;
+    --muted-foreground: 220 13% 75%;
 
-    --accent: 166 79% 42%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 158 64% 62%;
+    --accent-foreground: 15 23 42;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    /* Status colors - Dark mode */
+    --destructive: 0 72% 61%;
+    --destructive-foreground: 255 255 255;
 
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 100%;
+    --success: 142 71% 55%;
+    --success-foreground: 255 255 255;
 
-    --warning: 45 93% 47%;
-    --warning-foreground: 0 0% 100%;
+    --warning: 43 96% 66%;
+    --warning-foreground: 0 0% 0%;
 
-    --border: 100 7% 23%;
+    --info: 212 95% 78%;
+    --info-foreground: 0 0% 0%;
+
+    /* UI elements - Dark mode */
+    --border: 100 7% 25%;
     --input: 30 41 59;
-    --ring: 166 79% 42%;
+    --ring: 158 64% 62%;
 
-    /* Dashboard specific colors - dark mode */
+    /* Dashboard specific colors - Dark mode */
     --dashboard-bg: 15 23 42;
-    --header-bg: 166 76% 21%;
-    --nav-active: 166 79% 42%;
-    --nav-inactive: 166 32% 94%;
-    --section-accent: 20 83% 45%;
-    --metric-positive: 142 76% 36%;
-    --metric-negative: 0 84% 60%;
-    --metric-neutral: 243 244 246;
+    --header-bg: 158 64% 18%;
+    --header-gradient: linear-gradient(135deg, hsl(158 64% 18%) 0%, hsl(158 64% 24%) 100%);
+    --nav-active: 158 64% 62%;
+    --nav-hover: 158 64% 55%;
+    --nav-inactive: 158 25% 25%;
+    --section-accent: 142 71% 55%;
     
-    /* Chart colors - dark mode */
-    --chart-primary: 166 79% 42%;
-    --chart-secondary: 65 92% 76%;
-    --chart-accent: 142 76% 36%;
+    /* KPI colors - Dark mode */
+    --metric-positive: 142 71% 55%;
+    --metric-positive-light: 142 54% 15%;
+    --metric-negative: 0 72% 61%;
+    --metric-negative-light: 0 86% 10%;
+    --metric-neutral: 248 250 252;
+    --metric-currency: 158 64% 62%;
+    
+    /* Chart colors palette - Dark mode */
+    --chart-primary: 158 64% 62%;
+    --chart-secondary: 65 92% 75%;
+    --chart-accent: 142 71% 55%;
+    --chart-warning: 43 96% 66%;
+    --chart-info: 212 95% 78%;
+    --chart-success: 142 71% 55%;
+    
+    /* Gradients - Dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(158 64% 62%) 0%, hsl(142 71% 55%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(30 41 59) 0%, hsl(30 41 59 / 0.8) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 55%) 0%, hsl(142 71% 65%) 100%);
+    
+    /* Shadows - Dark mode */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+    --shadow-brand: 0 10px 25px -5px hsl(158 64% 62% / 0.3);
 
+    /* Sidebar colors */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 158 64% 62%;
+    --sidebar-primary-foreground: 15 23 42;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 158 64% 62%;
   }
 }
 
@@ -144,5 +201,97 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  /* Custom scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+
+  /* Smooth transitions for all interactive elements */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Glassmorphism effect */
+  .glass {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Gradient text animation */
+  @keyframes gradient-x {
+    0%, 100% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-gradient-x {
+    animation: gradient-x 3s ease infinite;
+    background-size: 200% 200%;
+  }
+
+  /* Pulse animation for loading states */
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      opacity: 0.7;
+      box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
+    }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
+
+/* Custom animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slideInUp {
+  animation: slideInUp 0.4s ease-out;
+}
+
+.animate-fadeInScale {
+  animation: fadeInScale 0.3s ease-out;
 }
