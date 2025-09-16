@@ -47,9 +47,9 @@ export const DashboardHeader = ({
         </div>
         
         <div className="flex items-center space-x-4">
-          <div className="flex items-center bg-dashboard-nav-active/20 px-3 py-1.5 rounded-md">
-            <Calendar className="w-4 h-4 mr-2" />
-            <span className="text-sm font-medium">
+          <div className="flex items-center bg-dashboard-date-box-bg px-3 py-1.5 rounded-md">
+            <Calendar className="w-4 h-4 mr-2 text-dashboard-date-box-text" />
+            <span className="text-sm font-medium text-dashboard-date-box-text">
               {format(dateRange.start, "dd/MM/yyyy", { locale: ptBR })} – {format(dateRange.end, "dd/MM/yyyy", { locale: ptBR })}
             </span>
           </div>
