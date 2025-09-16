@@ -64,7 +64,7 @@ export const CobrancaSection = ({
         
         <KPICard title="Média por Cliente" value={kpiData.mediaPorCliente.value} variant="currency" onClick={() => onKPIClick?.("mediaPorCliente")} />
         
-        <KPICard title="Cartões Cadastrados" value="12" variant="positive" onClick={() => onKPIClick?.("cartoescastrados")} />
+        <KPICard title="Cartões Cadastrados" value="12" variant="success" onClick={() => onKPIClick?.("cartoescastrados")} />
         
         <KPICard title="Valores de Links Gerados em Aberto" value={kpiData.valoresLinksAberto.value} variant="negative" onClick={() => onKPIClick?.("valoresLinksAberto")} />
 
@@ -77,7 +77,7 @@ export const CobrancaSection = ({
         
         <KPICard title="WhatsApp Errados" value="7" variant="negative" onClick={() => onKPIClick?.("whatsappErrados")} />
         
-        <KPICard title="Valores Recebidos" value={kpiData.valoresRecebidos.value} variant="positive" onClick={() => onKPIClick?.("valoresRecebidos")} />
+        <KPICard title="Valores Recebidos" value={kpiData.valoresRecebidos.value} variant="success" onClick={() => onKPIClick?.("valoresRecebidos")} />
       </div>
 
       {/* Charts */}

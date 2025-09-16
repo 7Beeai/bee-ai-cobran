@@ -4,7 +4,7 @@ interface KPICardProps {
   title: string;
   value: string;
   percentage?: number;
-  variant: "positive" | "negative" | "neutral" | "currency";
+  variant: "positive" | "negative" | "neutral" | "currency" | "success";
   showProgressBar?: boolean;
   onClick?: () => void;
 }
@@ -25,6 +25,8 @@ export const KPICard = ({
         return "text-dashboard-metric-negative";
       case "currency":
         return "text-dashboard-metric-positive";
+      case "success":
+        return "text-dashboard-metric-success";
       default:
         return "text-dashboard-metric-neutral";
     }
