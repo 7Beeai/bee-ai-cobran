@@ -33,8 +33,12 @@ export const DashboardHeader = ({
       {/* Main Header */}
       <div className="px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <div className="font-bold text-xl tracking-wide">
-            Bee.AI | <span className="font-normal">Intelligent Sales</span>
+          <div className="flex items-center">
+            <img 
+              src="/src/assets/7bee-logo-white.png" 
+              alt="7Bee Logo" 
+              className="h-8 w-auto"
+            />
           </div>
           <div className="ml-8">
             <h1 className="text-xl font-semibold">Dashboard CT – Cobrança AI</h1>
