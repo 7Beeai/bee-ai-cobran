@@ -31,6 +31,14 @@ export default {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -46,6 +54,21 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        dashboard: {
+          bg: "hsl(var(--dashboard-bg))",
+          header: "hsl(var(--header-bg))",
+          "nav-active": "hsl(var(--nav-active))",
+          "nav-inactive": "hsl(var(--nav-inactive))",
+          "section-accent": "hsl(var(--section-accent))",
+          "metric-positive": "hsl(var(--metric-positive))",
+          "metric-negative": "hsl(var(--metric-negative))",
+          "metric-neutral": "hsl(var(--metric-neutral))",
+        },
+        chart: {
+          primary: "hsl(var(--chart-primary))",
+          secondary: "hsl(var(--chart-secondary))",
+          accent: "hsl(var(--chart-accent))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
