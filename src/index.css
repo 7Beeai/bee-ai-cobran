@@ -45,7 +45,7 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     /* Dashboard specific colors */
-    --dashboard-bg: 243 244 246;
+    --dashboard-bg: 0 0% 85%;
     --header-bg: 166 76% 21%;
     --nav-active: 166 79% 42%;
     --nav-inactive: 166 32% 94%;
@@ -116,7 +116,7 @@ All colors MUST be HSL.
     --ring: 166 79% 42%;
 
     /* Dashboard specific colors - dark mode */
-    --dashboard-bg: 15 23 42;
+    --dashboard-bg: 0 0% 85%;
     --header-bg: 166 76% 21%;
     --nav-active: 166 79% 42%;
     --nav-inactive: 166 32% 94%;
