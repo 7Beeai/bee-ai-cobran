@@ -7,6 +7,7 @@ interface KPICardProps {
   variant: "positive" | "negative" | "neutral" | "currency" | "success";
   showProgressBar?: boolean;
   onClick?: () => void;
+  className?: string;
 }
 
 export const KPICard = ({ 
@@ -15,7 +16,8 @@ export const KPICard = ({
   percentage, 
   variant, 
   showProgressBar = false,
-  onClick 
+  onClick,
+  className 
 }: KPICardProps) => {
   const getValueColor = () => {
     switch (variant) {
@@ -49,7 +51,8 @@ export const KPICard = ({
     <div 
       className={cn(
         "bg-card rounded-lg p-4 shadow-sm border transition-all duration-200",
-        onClick && "cursor-pointer hover:shadow-md hover:scale-[1.02]"
+        onClick && "cursor-pointer hover:shadow-md hover:scale-[1.02]",
+        className
       )}
       onClick={onClick}
     >
