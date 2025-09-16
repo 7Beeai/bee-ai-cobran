@@ -70,7 +70,7 @@ export const DashboardHeader = ({
               onClick={() => onTabChange(tab)}
               className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
                 selectedTab === tab
-                  ? "bg-dashboard-nav-active text-white"
+                  ? "bg-white/20 text-white"
                   : "text-white/70 hover:text-white hover:bg-white/10"
               }`}
             >
