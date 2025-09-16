@@ -50,9 +50,9 @@ All colors MUST be HSL.
     --nav-active: 166 79% 42%;
     --nav-inactive: 166 32% 94%;
     --section-accent: 20 83% 45%;
-    --metric-positive: 85 100% 50%;
+    --metric-positive: 0 0% 33%;
     --metric-negative: 0 84% 60%;
-    --metric-neutral: 100 7% 23%;
+    --metric-neutral: 0 0% 33%;
     
     /* Chart colors */
     --chart-primary: 166 79% 42%;
@@ -117,9 +117,9 @@ All colors MUST be HSL.
     --nav-active: 166 79% 42%;
     --nav-inactive: 166 32% 94%;
     --section-accent: 20 83% 45%;
-    --metric-positive: 85 100% 50%;
+    --metric-positive: 0 0% 33%;
     --metric-negative: 0 84% 60%;
-    --metric-neutral: 243 244 246;
+    --metric-neutral: 0 0% 33%;
     
     /* Chart colors - dark mode */
     --chart-primary: 166 79% 42%;
