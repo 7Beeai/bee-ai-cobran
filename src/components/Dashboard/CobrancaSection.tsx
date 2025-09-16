@@ -27,7 +27,7 @@ export const CobrancaSection = ({ onKPIClick, onReguaClick, onDailyClick }: Cobr
       {/* Section Header */}
       <div className="flex items-center mb-6 animate-slideInUp">
         <div className="w-1 h-8 bg-gradient-to-b from-dashboard-section-accent to-dashboard-section-accent/60 mr-4 rounded-full"></div>
-        <h2 className="text-2xl font-bold text-foreground tracking-tight">Cobrança</h2>
+        <h2 className="text-2xl font-bold text-muted-foreground tracking-tight">Cobrança</h2>
       </div>
 
       {/* KPI Cards Grid */}

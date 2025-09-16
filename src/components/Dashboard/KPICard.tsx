@@ -39,15 +39,14 @@ export const KPICard = ({
       case "currency":
         return "bg-dashboard-metric-positive";
       default:
-        return "bg-dashboard-nav-active";
+        return "bg-dashboard-metric-positive";
     }
   };
 
   return (
     <div 
       className={cn(
-        "bg-card rounded-xl p-5 shadow-sm border border-border/50 transition-all duration-300 hover:shadow-md",
-        "backdrop-blur-sm bg-gradient-card",
+        "bg-white rounded-xl p-5 shadow-sm border border-border/50 transition-all duration-300 hover:shadow-md",
         onClick && "cursor-pointer hover:shadow-lg hover:scale-[1.02] hover:border-primary/20"
       )}
       onClick={onClick}

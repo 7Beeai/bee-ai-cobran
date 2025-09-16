@@ -65,11 +65,11 @@ All colors MUST be HSL.
     --metric-positive-light: 142 54% 91%;
     --metric-negative: 0 72% 51%;
     --metric-negative-light: 0 86% 97%;
-    --metric-neutral: 64 4% 26%;
-    --metric-currency: 158 64% 52%;
+    --metric-neutral: 71 84% 6%;
+    --metric-currency: 142 71% 45%;
     
     /* Chart colors palette */
-    --chart-primary: 158 64% 52%;
+    --chart-primary: 142 71% 45%;
     --chart-secondary: 65 92% 65%;
     --chart-accent: 142 71% 45%;
     --chart-warning: 43 96% 56%;
@@ -156,20 +156,20 @@ All colors MUST be HSL.
     --section-accent: 142 71% 55%;
     
     /* KPI colors - Dark mode */
-    --metric-positive: 142 71% 55%;
+    --metric-positive: 142 71% 45%;
     --metric-positive-light: 142 54% 15%;
     --metric-negative: 0 72% 61%;
     --metric-negative-light: 0 86% 10%;
-    --metric-neutral: 248 250 252;
-    --metric-currency: 158 64% 62%;
+    --metric-neutral: 71 84% 6%;
+    --metric-currency: 142 71% 45%;
     
     /* Chart colors palette - Dark mode */
-    --chart-primary: 158 64% 62%;
+    --chart-primary: 142 71% 45%;
     --chart-secondary: 65 92% 75%;
-    --chart-accent: 142 71% 55%;
+    --chart-accent: 142 71% 45%;
     --chart-warning: 43 96% 66%;
     --chart-info: 212 95% 78%;
-    --chart-success: 142 71% 55%;
+    --chart-success: 142 71% 45%;
     
     /* Gradients - Dark mode */
     --gradient-primary: linear-gradient(135deg, hsl(158 64% 62%) 0%, hsl(142 71% 55%) 100%);
