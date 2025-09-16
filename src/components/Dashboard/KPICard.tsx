@@ -39,7 +39,7 @@ export const KPICard = ({
       case "currency":
         return "bg-dashboard-progress-bar-positive";
       default:
-        return "bg-dashboard-nav-active";
+        return "bg-dashboard-progress-bar-positive";
     }
   };
 
