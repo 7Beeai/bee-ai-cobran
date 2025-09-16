@@ -64,6 +64,7 @@ export default {
           "metric-positive": "hsl(var(--metric-positive))",
           "metric-negative": "hsl(var(--metric-negative))",
           "metric-neutral": "hsl(var(--metric-neutral))",
+          "progress-bar-positive": "hsl(var(--progress-bar-positive))",
         },
         chart: {
           primary: "hsl(var(--chart-primary))",

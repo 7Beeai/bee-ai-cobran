@@ -53,6 +53,7 @@ All colors MUST be HSL.
     --metric-positive: 0 0% 33%;
     --metric-negative: 0 84% 60%;
     --metric-neutral: 0 0% 33%;
+    --progress-bar-positive: 85 100% 50%;
     
     /* Chart colors */
     --chart-primary: 166 79% 42%;
@@ -120,6 +121,7 @@ All colors MUST be HSL.
     --metric-positive: 0 0% 33%;
     --metric-negative: 0 84% 60%;
     --metric-neutral: 0 0% 33%;
+    --progress-bar-positive: 85 100% 50%;
     
     /* Chart colors - dark mode */
     --chart-primary: 166 79% 42%;

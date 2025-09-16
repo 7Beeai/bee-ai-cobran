@@ -33,11 +33,11 @@ export const KPICard = ({
   const getProgressColor = () => {
     switch (variant) {
       case "positive":
-        return "bg-dashboard-metric-positive";
+        return "bg-dashboard-progress-bar-positive";
       case "negative":
         return "bg-dashboard-metric-negative";
       case "currency":
-        return "bg-dashboard-metric-positive";
+        return "bg-dashboard-progress-bar-positive";
       default:
         return "bg-dashboard-nav-active";
     }
