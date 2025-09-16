@@ -39,47 +39,37 @@ export const KPICard = ({
       case "currency":
         return "bg-dashboard-metric-positive";
       default:
-        return "bg-dashboard-metric-positive";
+        return "bg-dashboard-nav-active";
     }
   };
 
   return (
     <div 
       className={cn(
-        "bg-white rounded-xl p-5 shadow-sm border border-border/50 transition-all duration-300 hover:shadow-md",
-        onClick && "cursor-pointer hover:shadow-lg hover:scale-[1.02] hover:border-primary/20"
+        "bg-card rounded-lg p-4 shadow-sm border transition-all duration-200",
+        onClick && "cursor-pointer hover:shadow-md hover:scale-[1.02]"
       )}
       onClick={onClick}
     >
-      <h3 className="text-xs font-medium text-muted-foreground mb-3 leading-tight uppercase tracking-wide">
+      <h3 className="text-xs font-medium text-muted-foreground mb-2 leading-tight">
         {title}
       </h3>
       
-      <div className="space-y-3">
-        <div className={cn("text-3xl font-bold tracking-tight", getValueColor())}>
+      <div className="space-y-2">
+        <div className={cn("text-2xl font-bold", getValueColor())}>
           {value}
         </div>
         
         {percentage !== undefined && (
-          <div className="flex items-center space-x-2">
-            <div className="text-sm font-medium text-muted-foreground">
-              {percentage.toFixed(1)}%
-            </div>
-            {showProgressBar && (
-              <div className="flex-1 bg-muted rounded-full h-2 overflow-hidden">
-                <div 
-                  className={cn("h-2 rounded-full transition-all duration-500 ease-out", getProgressColor())}
-                  style={{ width: `${Math.min(percentage, 100)}%` }}
-                />
-              </div>
-            )}
+          <div className="text-sm text-muted-foreground">
+            {percentage.toFixed(1)}%
           </div>
         )}
         
-        {!showProgressBar && percentage !== undefined && (
-          <div className="w-full bg-muted rounded-full h-2">
+        {showProgressBar && percentage !== undefined && (
+          <div className="w-full bg-muted rounded-full h-1.5">
             <div 
-              className={cn("h-2 rounded-full transition-all duration-500 ease-out", getProgressColor())}
+              className={cn("h-1.5 rounded-full transition-all duration-300", getProgressColor())}
               style={{ width: `${Math.min(percentage, 100)}%` }}
             />
           </div>
