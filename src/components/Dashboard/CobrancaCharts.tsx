@@ -74,7 +74,7 @@ export const CobrancaCharts = ({
             <Bar dataKey="recebido" fill="#00a988" radius={[2, 2, 0, 0]} onClick={data => onReguaClick?.(data.etapa)} style={{
             cursor: onReguaClick ? 'pointer' : 'default'
           }} />
-            <Bar dataKey="emAberto" fill="#00a988" radius={[2, 2, 0, 0]} onClick={data => onReguaClick?.(data.etapa)} style={{
+            <Bar dataKey="emAberto" fill="#95ff01" radius={[2, 2, 0, 0]} onClick={data => onReguaClick?.(data.etapa)} style={{
             cursor: onReguaClick ? 'pointer' : 'default'
           }} />
           </BarChart>
@@ -86,7 +86,7 @@ export const CobrancaCharts = ({
             <span className="text-sm text-muted-foreground">Recebido</span>
           </div>
           <div className="flex items-center">
-            <div className="w-3 h-3 rounded mr-2" style={{backgroundColor: '#00a988'}}></div>
+            <div className="w-3 h-3 rounded mr-2" style={{backgroundColor: '#95ff01'}}></div>
             <span className="text-sm text-muted-foreground">Em Aberto</span>
           </div>
         </div>
