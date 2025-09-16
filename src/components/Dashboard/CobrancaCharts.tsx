@@ -71,10 +71,10 @@ export const CobrancaCharts = ({
             borderRadius: '6px',
             fontSize: '12px'
           }} />
-            <Bar dataKey="recebido" fill="#4ade80" radius={[2, 2, 0, 0]} onClick={data => onReguaClick?.(data.etapa)} style={{
+            <Bar dataKey="recebido" fill="#00a988" radius={[2, 2, 0, 0]} onClick={data => onReguaClick?.(data.etapa)} style={{
             cursor: onReguaClick ? 'pointer' : 'default'
           }} />
-            <Bar dataKey="emAberto" fill="#a3e635" radius={[2, 2, 0, 0]} onClick={data => onReguaClick?.(data.etapa)} style={{
+            <Bar dataKey="emAberto" fill="#00a988" radius={[2, 2, 0, 0]} onClick={data => onReguaClick?.(data.etapa)} style={{
             cursor: onReguaClick ? 'pointer' : 'default'
           }} />
           </BarChart>
@@ -82,11 +82,11 @@ export const CobrancaCharts = ({
         
         <div className="flex justify-center mt-4 space-x-6">
           <div className="flex items-center">
-            <div className="w-3 h-3 rounded mr-2" style={{backgroundColor: '#4ade80'}}></div>
+            <div className="w-3 h-3 rounded mr-2" style={{backgroundColor: '#00a988'}}></div>
             <span className="text-sm text-muted-foreground">Recebido</span>
           </div>
           <div className="flex items-center">
-            <div className="w-3 h-3 rounded mr-2" style={{backgroundColor: '#a3e635'}}></div>
+            <div className="w-3 h-3 rounded mr-2" style={{backgroundColor: '#00a988'}}></div>
             <span className="text-sm text-muted-foreground">Em Aberto</span>
           </div>
         </div>
@@ -111,13 +111,13 @@ export const CobrancaCharts = ({
             borderRadius: '6px',
             fontSize: '12px'
           }} />
-            <Line type="monotone" dataKey="valor" stroke="hsl(var(--chart-accent))" strokeWidth={3} dot={{
-            fill: "hsl(var(--chart-accent))",
+            <Line type="monotone" dataKey="valor" stroke="#00a988" strokeWidth={3} dot={{
+            fill: "#00a988",
             strokeWidth: 0,
             r: 4
           }} activeDot={{
             r: 6,
-            fill: "hsl(var(--chart-accent))",
+            fill: "#00a988",
             onClick: data => onDailyClick?.(data.payload.dia)
           }} />
           </LineChart>
